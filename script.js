@@ -312,6 +312,8 @@ Meeting you changed my life in the most beautiful way.
 
 Every laugh, every conversation, every memory with you became part of my happiness.
 
+The rope of the matter is in our hands, either we hold on to it together or it will break.
+
 I hope this birthday brings you all the joy you deserve.
 
 Thank you for being my safe place and my favorite person.
