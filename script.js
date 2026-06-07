@@ -382,19 +382,24 @@ Happy Birthday, my love.
 
     // Page 8 — Final Surprise
     function animateFinalPage() {
-        // Animate lines
+        // Animate lines if they exist
         const lines = document.querySelectorAll('#final-lines .final-line');
-        lines.forEach(line => {
-            const delay = parseInt(line.dataset.delay) || 0;
-            setTimeout(() => {
-                line.classList.add('visible');
-            }, delay + 500);
-        });
+        if (lines.length > 0) {
+            lines.forEach(line => {
+                const delay = parseInt(line.dataset.delay) || 0;
+                setTimeout(() => {
+                    line.classList.add('visible');
+                }, delay + 500);
+            });
+        }
 
-        // Animate love text
-        setTimeout(() => {
-            document.getElementById('final-love').classList.add('visible');
-        }, 2500);
+        // Animate love text if it exists
+        const finalLove = document.getElementById('final-love');
+        if (finalLove) {
+            setTimeout(() => {
+                finalLove.classList.add('visible');
+            }, 2500);
+        }
 
         // Start floating hearts
         startFinalHearts();
