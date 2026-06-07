@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Khadija ❤️</title>
+    <meta name="description" content="A special birthday celebration for the most beautiful girl in the world — Khadija.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background layers -->
+    <div id="bg-gradient" class="bg-gradient"></div>
+    <canvas id="particles-canvas"></canvas>
+    <div id="petals-container"></div>
+    <div id="corner-decor-tl" class="corner-decor top-left"></div>
+    <div id="corner-decor-tr" class="corner-decor top-right"></div>
+    <div id="corner-decor-bl" class="corner-decor bottom-left"></div>
+    <div id="corner-decor-br" class="corner-decor bottom-right"></div>
+
+    <!-- Music control -->
+    <button id="music-toggle" class="music-toggle" aria-label="Toggle Music">
+        <span class="music-icon" id="music-icon">♫</span>
+        <span class="music-pulse"></span>
+    </button>
+    <audio id="bg-music" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Page indicator -->
+    <div id="page-indicator" class="page-indicator">
+        <span id="page-current">1</span> / <span id="page-total">8</span>
+    </div>
+
+    <!-- Navigation -->
+    <button id="btn-prev" class="nav-btn nav-prev" aria-label="Previous Page">
+        <span>←</span> Previous
+    </button>
+    <button id="btn-next" class="nav-btn nav-next" aria-label="Next Page">
+        Next <span>→</span>
+    </button>
+
+    <!-- ============ PAGES ============ -->
+    <div id="slides-wrapper" class="slides-wrapper">
+
+        <!-- PAGE 1 — Welcome -->
+        <section id="page-1" class="slide active" data-page="1">
+            <div class="slide-content page-welcome">
+                <h1 class="welcome-title" id="welcome-title">
+                    <span class="title-line title-line-1">Happy Birthday</span>
+                    <span class="heart-icon">❤️</span>
+                </h1>
+                <p class="welcome-subtitle" id="welcome-subtitle">To the most beautiful girl in my world...</p>
+                <div class="photo-frame welcome-photo" id="welcome-photo">
+                    <div class="photo-glow"></div>
+                    <div class="photo-sparkles"></div>
+                    <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                </div>
+                <button class="begin-btn glass-btn" id="begin-btn">
+                    <span>Begin Our Story</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- PAGE 2 — My Favorite Person -->
+        <section id="page-2" class="slide" data-page="2">
+            <div class="slide-content page-favorite">
+                <div class="favorite-layout">
+                    <div class="photo-frame side-photo" id="fav-photo">
+                        <div class="photo-glow"></div>
+                        <div class="photo-sparkles"></div>
+                        <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                    </div>
+                    <div class="glass-card message-card" id="fav-card">
+                        <h2 class="card-title">My Favorite Person</h2>
+                        <div class="animated-lines" id="fav-lines">
+                            <p class="msg-line" data-delay="0">Happy Birthday, my love.</p>
+                            <p class="msg-line" data-delay="400">You make every day brighter...</p>
+                            <p class="msg-line" data-delay="800">Even when you're annoying. 😏</p>
+                            <p class="msg-line" data-delay="1200">Especially when you're annoying. 😂</p>
+                            <p class="msg-line" data-delay="1600">Thank you for existing. 🥺</p>
+                            <p class="msg-line highlight" data-delay="2000">You are my favorite notification. 💜</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3 — Reasons I Love You -->
+        <section id="page-3" class="slide" data-page="3">
+            <div class="slide-content page-reasons">
+                <h2 class="section-title" id="reasons-title">Reasons I Love You</h2>
+                <div class="reasons-grid" id="reasons-grid">
+                    <div class="reason-card glass-card" data-delay="0">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">Your smile</span>
+                    </div>
+                    <div class="reason-card glass-card" data-delay="150">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">Your laugh</span>
+                    </div>
+                    <div class="reason-card glass-card" data-delay="300">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">Your kindness</span>
+                    </div>
+                    <div class="reason-card glass-card" data-delay="450">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">Your eyes</span>
+                    </div>
+                    <div class="reason-card glass-card" data-delay="600">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">Your patience</span>
+                    </div>
+                    <div class="reason-card glass-card" data-delay="750">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">Your crazy little moments</span>
+                    </div>
+                    <div class="reason-card glass-card" data-delay="900">
+                        <span class="reason-emoji">❤️</span>
+                        <span class="reason-text">The way you make everything beautiful</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4 — Funny Section -->
+        <section id="page-4" class="slide" data-page="4">
+            <div class="slide-content page-funny">
+                <h2 class="section-title funny-title" id="funny-title">Some Facts 😂</h2>
+                <div class="funny-grid" id="funny-grid">
+                    <div class="flip-card" data-delay="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <span class="flip-emoji">🧥</span>
+                                <p>Fact #1</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <p>You steal my hoodies like it's your job.</p>
+                                <span class="flip-emoji-small">🥶</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-delay="150">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <span class="flip-emoji">🍟</span>
+                                <p>Fact #2</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <p>"I'm not hungry" then eats all my food.</p>
+                                <span class="flip-emoji-small">😤</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-delay="300">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <span class="flip-emoji">📱</span>
+                                <p>Fact #3</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <p>"I'll reply in a sec" — 3 hours later.</p>
+                                <span class="flip-emoji-small">💀</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-delay="450">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <span class="flip-emoji">🏆</span>
+                                <p>Fact #4</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <p>You win every argument. Even when you're wrong.</p>
+                                <span class="flip-emoji-small">🙄</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-delay="600">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <span class="flip-emoji">💜</span>
+                                <p>Fact #5</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <p>You stole my heart and never gave it back.</p>
+                                <span class="flip-emoji-small">🥰</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-delay="750">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass-card">
+                                <span class="flip-emoji">😴</span>
+                                <p>Fact #6</p>
+                            </div>
+                            <div class="flip-card-back glass-card">
+                                <p>"5 more minutes" — falls asleep for 2 hours.</p>
+                                <span class="flip-emoji-small">😂</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="funny-hint">✨ Hover or tap the cards ✨</p>
+            </div>
+        </section>
+
+        <!-- PAGE 5 — Love Meter -->
+        <section id="page-5" class="slide" data-page="5">
+            <div class="slide-content page-meter">
+                <h2 class="section-title" id="meter-title">Love Meter 💜</h2>
+                <div class="meter-container" id="meter-container">
+                    <div class="meter-track">
+                        <div class="meter-fill" id="meter-fill"></div>
+                    </div>
+                    <div class="meter-value" id="meter-value">0%</div>
+                </div>
+                <p class="meter-message" id="meter-message"></p>
+                <div class="heart-explosion" id="heart-explosion"></div>
+            </div>
+        </section>
+
+        <!-- PAGE 6 — Letter -->
+        <section id="page-6" class="slide" data-page="6">
+            <div class="slide-content page-letter">
+                <div class="letter-card glass-card" id="letter-card">
+                    <div class="letter-seal">💌</div>
+                    <div class="letter-text" id="letter-text"></div>
+                    <div class="letter-cursor" id="letter-cursor">|</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 7 — Heart Carousel -->
+        <section id="page-7" class="slide" data-page="7">
+            <div class="slide-content page-carousel">
+                <h2 class="section-title carousel-title" id="carousel-title">You & Me 💜</h2>
+                <div class="carousel-scene" id="carousel-scene">
+                    <div class="carousel-ring" id="carousel-ring">
+                        <div class="carousel-item" style="--i: 0;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 1;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 2;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 3;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 4;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 5;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 6;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i: 7;">
+                            <div class="carousel-heart-frame">
+                                <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                                <div class="carousel-heart-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-center-heart" id="carousel-center-heart">💜</div>
+                </div>
+                <p class="carousel-caption" id="carousel-caption">Every moment with you is my favorite 💕</p>
+            </div>
+        </section>
+
+        <!-- PAGE 8 — Final Surprise -->
+        <section id="page-8" class="slide" data-page="8">
+            <div class="slide-content page-final">
+                <div class="photo-frame final-photo" id="final-photo">
+                    <div class="photo-glow final-glow"></div>
+                    <div class="photo-sparkles"></div>
+                    <img src="photo.jpeg" alt="Khadija" loading="lazy">
+                </div>
+                <h1 class="final-title" id="final-title">
+                    <span>Happy Birthday Khadija</span>
+                    <span class="heart-icon final-heart">❤️</span>
+                </h1>
+                <div class="final-lines" id="final-lines">
+                    <p class="final-line" data-delay="0">Today is your day.</p>
+                    <p class="final-line" data-delay="600">Tomorrow too.</p>
+                    <p class="final-line" data-delay="1200">And every day after that.</p>
+                </div>
+                <div class="final-love" id="final-love">
+                    <p class="love-line-1">I love you.</p>
+                    <p class="love-line-2">Forever.</p>
+                </div>
+                <div class="final-hearts" id="final-hearts"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
