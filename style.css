@@ -815,6 +815,8 @@ body {
     justify-content: center;
     gap: 12px;
     border-radius: 20px;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
 .flip-card-front {
@@ -830,8 +832,10 @@ body {
 .flip-card-front p,
 .flip-card-back p {
     font-family: var(--font-heading);
-    font-size: clamp(14px, 2vw, 17px);
+    font-size: clamp(13px, 2vw, 16px);
     color: var(--lavender-light);
+    text-align: center;
+    margin: 0;
 }
 
 .flip-emoji {
